@@ -8,4 +8,4 @@ sbs = ServiceBusService(
 
 while True :
     msg = sbs.receive_subscription_message('SERVICE_BUS_TOPIC', 'SERVICEBUS_SUBSCRIPTION_1', peek_lock=False)
-    print(msg.body)
+    print(msg.body.decode("utf-8"))
